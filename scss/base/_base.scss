@@ -1,4 +1,4 @@
-asdf/**
+/**
  * BOOTSTRAP OVERRIDES
  */
 * {
@@ -6,7 +6,7 @@ asdf/**
 }
 body {
   @include text(18px, 300, $black, 26px);
-  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: $font-stack;
   background-color: white;
 }
 
@@ -19,14 +19,13 @@ body {
   width: 100%;
   padding-right: 0;
   padding-left: 0;
+	
+	& .row {
+		max-width: 1270px;
+		margin: 0 auto;
+		padding: 0;
+	}
 }
-.container .row {
-  max-width: 1270px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-
 
 /* TEXT */
 .region-content{
@@ -101,12 +100,12 @@ a.btn:hover, a.btn:active, .btn a:hover, .btn a:active {
   color: $black;
 }
 .btn-primary {
-  color: #fff !important;
+  color: $white !important;
   background-color: #8C1D40;
   border-color: #8C1D40;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:hover {
-  color: #fff !important;
+  color: $white !important;
   background-color: #d23153;
   border-color: #d23153;
 }
@@ -132,15 +131,17 @@ a.btn:hover, a.btn:active, .btn a:hover, .btn a:active {
   width: 100% !important;
   border: none;
   font-size: 14px;
-  background: #ffffff;
+  background: $white;
   color: #4D4D4D;
+	
+	& th {
+		background: #414141;
+		color: $white;
+		font-weight: normal;
+		text-align: inherit;	
+	}
 }
-.table th {
-  background: #414141;
-  color: #ffffff;
-  font-weight: normal;
-  text-align: inherit;
-}
+
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #e8e8e8;
 }
@@ -174,12 +175,12 @@ a.btn:hover, a.btn:active, .btn a:hover, .btn a:active {
 
 /* NAV-PILLS */
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
-  color: #fff;
+  color: $white;
   background-color: #8C1D40;
 }
 .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
   color: #8C1D40;
-  background-color: #fff;
+  background-color: $white;
 }
 
 
@@ -189,7 +190,7 @@ a.btn:hover, a.btn:active, .btn a:hover, .btn a:active {
   border-color: #8C1D40;
 }
 .panel-primary > .panel-heading {
-  color: #fff;
+  color: $white;
   background-color: #8C1D40;
   border-color: #8C1D40;
 }
